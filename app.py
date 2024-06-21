@@ -34,10 +34,10 @@ def _set_if_undefined(var: str):
     if not os.environ.get(var):
         os.environ[var] = getpass.getpass(f"Please provide your {var}")
 
-_set_if_undefined("sk-proj-PAZDiW59Dm9D4QEBU54HT3BlbkFJpBFYnu2vjJzXmKTLYAIN")
-_set_if_undefined("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")
+_set_if_undefined("sk-proj-******")
+_set_if_undefined("lsv2_pt_******")
 
-TAVILY_API_KEY = "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"
+TAVILY_API_KEY = "tvly-******"
 tavilySearchAPIWrapper = TavilySearchAPIWrapper(tavily_api_key=TAVILY_API_KEY)
 tavily_tool = TavilySearchResults(api_wrapper=tavilySearchAPIWrapper, max_results=5)
 
@@ -106,7 +106,7 @@ prompt = ChatPromptTemplate.from_messages(
 ).partial(options=str(options), members=", ".join(members))
 
 llm = ChatOpenAI(model="gpt-4-1106-preview",
-                 openai_api_key="sk-proj-PAZDiW59Dm9D4QEBU54HT3BlbkFJpBFYnu2vjJzXmKTLYAIN")
+                 openai_api_key="sk-proj-******")
 
 supervisor_chain = (
     prompt
