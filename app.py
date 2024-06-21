@@ -34,7 +34,7 @@ def _set_if_undefined(var: str):
     if not os.environ.get(var):
         os.environ[var] = getpass.getpass(f"Please provide your {var}")
 
-_set_if_undefined("sk-proj-******")
+#_set_if_undefined("sk-proj-******")
 _set_if_undefined("lsv2_pt_******")
 
 TAVILY_API_KEY = "tvly-******"
@@ -105,8 +105,8 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 ).partial(options=str(options), members=", ".join(members))
 
-llm = ChatOpenAI(model="gpt-4-1106-preview",
-                 openai_api_key="sk-proj-******")
+llm = ChatOpenAI(model="gpt-4-1106-preview"
+                 """openai_api_key='sk-proj-******'""")
 
 supervisor_chain = (
     prompt
