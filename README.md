@@ -4,7 +4,7 @@
 
 ## Supports:
 
-### Generating Python code
-### Performing webscraping
-### Processing input files (CSV, PDF, JSON, HTML, TXT)
-### Multi-turn conversation with memory tracking, i.e. follow-up questions
+#### Generating Python code
+#### Performing webscraping
+#### Processing input files (CSV, PDF, JSON, HTML, TXT)
+#### Multi-turn conversation with memory tracking, i.e. follow-up questions
